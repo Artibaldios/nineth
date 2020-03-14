@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>diplom</title>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Helvetica', 'Arial', sans-serif;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        .header {
+            width: 100%;
+        }
+
+        .position-center {
+            margin: 0 auto;
+            max-width: 1080px;
+        }
+
+        .top-head {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 15px;
+            height: 65px;
+        }
+
+        .logo {
+            display: inline-block;
+            width: 199px;
+            height: 61px;
+        }
+
+        .navigation ul {
+            display: flex;
+            list-style-type: none;
+        }
+
+        .navigation li {
+            margin: 30px 30px 0 0;
+        }
+
+        .navigation li a {
+            line-height: 18px;
+            color: #231f20;
+            font-weight: 400;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .navigation li a:hover {
+            color: #97d9ed;
+        }
+
+        .top-head button {
+            height: 35px;
+            width: 120px;
+            padding: 10px 25px 10px 25px;
+            margin-top: 18px;
+            background-color: #009bcb;
+            color: white;
+            border: 0px;
+        }
+
+        .top-head button:hover {
+            color: #009bcb;
+            background-color: white;
+            border: 2px solid #009bcb;
+        }
+
+        .promo {
+            background: url(images/people.png);
+            background-position: right;
+            background-repeat: no-repeat;
+            background-size: 50%;
+        }
+
+        .promo-article {
+            width: 50%;
+        }
+
+        .promo-article h2 {
+            padding: 55px 0 35px 0;
+        }
+
+        .promo-article p {
+            padding-right: 25px;
+        }
+
+        .promo-article button {
+            height: 33px;
+            width: 180px;
+            background-color: #009bcb;
+            color: white;
+            border: 2px solid #009bcb;
+            margin: 30px 0 53px 0;
+            font-weight: bolder;
+        }
+
+        .promo-article button:hover {
+            color: #009bcb;
+            background-color: white;
+        }
+
+        .section1 {
+            background: #f8f7f7;
+            margin-bottom: 30px;
+        }
+
+        .row {
+            display: flex;
+        }
+
+        .col-3 {
+            width: 25%;
+            border-left: 2px solid white;
+            border-right: 2px solid white;
+            text-align: center;
+            opacity: 1;
+        }
+
+        .col-3:first-child {
+            border-left: 4px solid white;
+        }
+
+        .col-3:nth-child(2) img {
+            padding: 55px 0 12px 0;
+        }
+
+        .col-3:nth-child(3) img {
+            padding: 55px 0 20px 0;
+        }
+
+        .col-3:last-child {
+            border-right: 4px solid white;
+        }
+
+        .col-3:last-child img {
+            padding: 55px 0 8px 0;
+        }
+
+        .col-3 p {
+            padding: 15px 0 50px 0;
+        }
+
+        .col-3 img {
+            padding-top: 50px;
+        }
+
+        .row2 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 50px;
+        }
+
+        .row2 .placeforimages:nth-child(3) {
+            margin-top: 28px;
+        }
+
+        .row2 .placeforimages:last-child {
+            margin-top: 28px;
+        }
+
+        .placeforimages {
+            position: relative;
+
+        }
+
+        .images {
+            height: 160px;
+            width: 525px;
+
+        }
+
+        .placeforimages p {
+            font-size: 30px;
+            position: absolute;
+            top: 40%;
+            left: 35%;
+            color: white;
+            font-weight: 600;
+        }
+
+        .placeforimages:nth-child(3) p {
+            position: absolute;
+            top: 40%;
+            left: 25%;
+        }
+
+        .section3 {
+            background: #f8f7f7;
+        }
+
+
+
+        .section4 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .section4 h1 {
+            color: #009bcb;
+            margin: 65px 0 45px 0;
+            text-align: center;
+        }
+
+        .section4 .article {
+            width: 920px;
+        }
+
+        .section4 p {
+            margin-bottom: 25px;
+        }
+
+        .section5 {
+            background: #f8f7f7;
+        }
+
+        .section5 p {
+            padding: 20px 0 25px 0;
+        }
+
+        .section3 .sl {
+            margin: auto;
+            width: 800px;
+        }
+
+        .section3 img {
+            height: 400px;
+            width: 100%;
+        }
+
+        .slick-prev:before {
+            font-size: 70px;
+            color: #00569C;
+            left: -100px;
+            top: -13px;
+            position: absolute;
+        }
+
+        .slick-next:before {
+            font-size: 70px;
+            color: #00569C;
+            left: 50px;
+            top: -13px;
+            position: absolute;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div class="position-center">
+            <div class="top-head">
+                <a href="https://www.wikipedia.org/">
+                    <img class="logo" src="images/лого.png">
+                </a>
+                <nav class="navigation">
+                    <ul>
+                        <li><a href="#">ДОКУМЕНТЫ</a></li>
+                        <li><a href="#">ЦЕНЫ</a></li>
+                        <li><a href="#">ДОСТАВКА</a></li>
+                        <li><a href="#">ГАРАНТИИ</a></li>
+                        <li><a href="#">ОТЗЫВЫ</a></li>
+                        <li><a href="#">КОНТАКТЫ</a></li>
+                    </ul>
+                </nav>
+
+                <button>
+                    ЗАКАЗАТЬ
+                </button>
+
+            </div>
+            <div class="promo">
+                <div class="promo-article">
+                    <h2>ЗАКАЖИ ДИПЛОМ НЕДОРОГО!</h2>
+                    <p>
+                        Граждане часто сталкиваются с необходимостью в наличии диплома определенной специальности при
+                        устройстве на работу. Обучение в ВУЗе требует больших финансовых и временных затрат. Решением
+                        проблемы станет приобретение документа. Узнавая, где можно купить диплом, обратите внимание на
+                        нашу
+                        компанию. Она заслужила доверие клиентов благодаря качественному предоставлению услуг.
+                    </p>
+                    <button>
+                        ПОДРОБНЕЕ
+                    </button>
+                </div>
+            </div>
+            <div>
+    </header>
+    <div class="section1">
+        <div class="position-center">
+            <div class="row">
+                <div class="col-3">
+                    <img class="icons" src="images/icon1.png">
+                    <p>ГОСЗНАК</p>
+                </div>
+                <div class="col-3">
+                    <img class="icons" src="images/icon2.png">
+                    <p>ГАРАНТИРОВАННОЕ <br> КАЧЕСТВО</p>
+                </div>
+                <div class="col-3">
+                    <img class="icons" src="images/icon3.png">
+                    <p>ДОСТАВКА <br> ПО РОССИИ И СНГ</p>
+                </div>
+                <div class="col-3">
+                    <img class="icons" src="images/icon4.png">
+                    <p>ВЫГОДНО</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section2">
+        <div class="position-center">
+            <div class="row2">
+                <div class="placeforimages">
+                    <a href="https://www.wikipedia.org/"><img class="images" src="images/image1.png">
+                        <p>ДИПЛОМЫ</p>
+                    </a>
+                </div>
+                <div class="placeforimages">
+                    <a href="https://www.wikipedia.org/"> <img class="images" src="images/image2.png">
+                        <p>СПРАВКИ</p>
+                    </a>
+                </div>
+                <div class="placeforimages">
+                    <a href="https://www.wikipedia.org/"> <img class="images" src="images/image3.png">
+                        <p>СВИДЕТЕЛЬСТВА</p>
+                    </a>
+                </div>
+                <div class="placeforimages">
+                    <a href="https://www.wikipedia.org/"> <img class="images" src="images/image4.png">
+                        <p>АТТЕСТАТЫ</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section3">
+        <div class="position-center">
+            <div class="sl">
+                <div class="sl__slide">
+                    <img src="images/sl1.jpg" alt="Картинка слайда 1" class="sl__img">
+
+                </div>
+                <div class="sl__slide">
+                    <img src="images/sl2.jpg" alt="Картинка слайда 2" class="sl__img">
+
+                </div>
+                <div class="sl__slide">
+                    <img src="images/sl3.jpg" alt="Картинка слайда 3" class="sl__img">
+
+                </div>
+                <div class="sl__slide">
+                    <img src="images/sl4.jpg" alt="Картинка слайда 4" class="sl__img">
+
+                </div>
+                <div class="sl__slide">
+                    <img src="images/sl5.jpg" alt="Картинка слайда 5" class="sl__img">
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="section4">
+        <h1>ДОКУМЕНТЫ О ВЫСШЕМ ОБРАЗОВАНИИ</h1>
+        <div class="article">
+            <p>В наши дни трудоустройство на любую солидную работу невозможно без ряда соответствующих документов. Среди
+                них документ, подтверждающий высшее образование с уверенностью можно считать главным – именно он
+                позволяет вам работать по определенной специальности и получать соответствующую зарплату. Жизнь может
+                подкинуть довольно неприятные сюрпризы – например, отчисление с последнего курса или банальную утерю
+                диплома по неосторожности. Восстановить документ вполне реально, но подобная процедура может занять
+                много времени, а порой и денег – просто так уже давно ничего не делается. Все это делает предложения
+                организаций, которые предлагают своим клиентам документы о высшем образовании, очень и очень
+                востребованными. Ведь в наши дни опыт работы решает куда как больше, чем какая-то бумажка, но именно её
+                отсутствие может стать для многих непреодолимой преградой. К счастью, устранить подобную неприятность
+                довольно просто – обратитесь к нам.</p>
+            <p>
+                Множество компаний во всех крупных городах предлагают услуги подобного рода – и столица не исключение.
+                Любые документы о высшем образовании купить в Москве довольно просто – глаза разбегаются от тематических
+                объявлений, как в реальной жизни, так и в Сети. Но не спешите обращаться в первую попавшуюся контору –
+                качество приобретенных дипломов, свидетельств и аттестатов у большинства из них довольно низкое.
+                Заказывать подобные документы нужно у надежной и проверенной временем организации, которая гарантирует
+                качественный результат в оформлении документов любого уровня сложности.</p>
+        </div>
+    </div>
+    <div class="section5">
+        <div class="position-center">
+            <p> &copy; ООО «Дипломзагод” <br>
+                +7 (3952) 758-198, info@gmail.com</p>
+        </div>
+    </div>
+
+
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script>
+        $('.sl').slick({
+            autoplay: true,
+            autoplaySpeed: 3000,
+            infinite: true,
+        })
+
+    </script>
+</body>
+
+
+</html>
